@@ -61,7 +61,7 @@ export const invokeModel = async (data) => {
   const command = new ConverseStreamCommand({
     modelId,
     messages: conversation,
-    inferenceConfig: { maxTokens: 256, temperature: 0, topP: 0.9 },
+    inferenceConfig: { maxTokens: 2048, temperature: 0, topP: 0.9 },
   });
 
   try {
@@ -72,6 +72,7 @@ export const invokeModel = async (data) => {
         for await (const chunk of response.stream) {
           const text = chunk?.contentBlockDelta?.delta?.text || '';
           controller.enqueue(text);
+          console.log(text);
 
         }
         controller.close();

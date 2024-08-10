@@ -1,7 +1,7 @@
 'use client';
 
-import {ChatBox} from '../components/chatbox'
+import { ChatBoxV2 } from "@/components/chatboxV2";
 
 export default function Home(){
-  return <ChatBox/>
+  return <ChatBoxV2/>
 }

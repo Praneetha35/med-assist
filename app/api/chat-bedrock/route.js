@@ -47,7 +47,7 @@ Remember to always prioritize user safety, accuracy, and clarity in your respons
 export const invokeModel = async (data) => {
   const client = new BedrockRuntimeClient();
 
-  const modelId = "amazon.titan-text-express-v1";
+  const modelId = "anthropic.claude-3-haiku-20240307-v1:0";
 
   const conversation = [
 

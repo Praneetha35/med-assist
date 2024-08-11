@@ -1,6 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI First Aid Chatbot with OpenAI, AWS Bedrock, Pinecone & Next.js
+
+This project is an AI-driven first aid chatbot application designed to provide users with quick, reliable, and accurate first aid information. The chatbot leverages cutting-edge AI technologies, including OpenAI, AWS Bedrock's Anthropic Claude Haiku, and Pinecone for Retrieval Augmented Generation (RAG). The front-end is built using Next.js with JavaScript and Material UI, offering a seamless user experience.
+
+## Features
+
+- **AI-Driven First Aid Assistance**: Provides users with immediate and accurate first aid guidance for various medical scenarios.
+- **Advanced AI Models**: Integrates OpenAI and AWS Bedrock's Claude Haiku for generating intelligent, context-aware responses.
+- **Retrieval Augmented Generation (RAG)**: Utilizes Pinecone and AWS Bedrock knowledge bases for advanced retrieval-based queries and response generation.
+- **Next.js & JavaScript**: A robust and scalable front-end framework ensuring high performance and flexibility.
+- **Material UI**: A modern and customizable UI framework to enhance user interaction and design.
+
+## Technologies Used
+
+- **OpenAI**: Powers the chatbot with state-of-the-art language models.
+- **AWS Bedrock (Anthropic Claude Haiku)**: Adds advanced AI capabilities and integration with AWS's suite of tools.
+- **Pinecone**: Provides a vector database for efficient and scalable search operations, essential for RAG.
+- **Next.js**: A React framework for server-side rendering, ensuring fast loading times and SEO-friendly pages.
+- **JavaScript**: The programming language used to develop the application logic.
+- **Material UI**: A UI library for building responsive and customizable front-end components.
 
 ## Getting Started
+
+### Prerequisites
+
+- **Node.js** (v14.x or later)
+- **npm** or **yarn**
+- **AWS Account** with access to Bedrock services
+- **OpenAI API Key**
+- **Pinecone Account & API Key**
+
+### Installation
 
 First, run the development server:
 

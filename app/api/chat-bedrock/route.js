@@ -72,8 +72,6 @@ export const invokeModel = async (data) => {
         for await (const chunk of response.stream) {
           const text = chunk?.contentBlockDelta?.delta?.text || '';
           controller.enqueue(text);
-          console.log(text);
-
         }
         controller.close();
       },

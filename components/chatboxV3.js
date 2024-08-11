@@ -7,11 +7,12 @@ import {
   Typography,
   Paper,
   IconButton,
+  FormControl,
 } from "@mui/material";
 import { useState, useRef, useEffect } from "react";
 import MedicalIcon from "@mui/icons-material/MedicalServices";
 
-export const ChatBoxV2 = () => {
+export const ChatBoxV3 = () => {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
@@ -23,6 +24,12 @@ export const ChatBoxV2 = () => {
     },
   ]);
 
+  function generateRandomSessionId(length) {
+    return Math.random().toString(36).slice(2, 2 + length);
+  }
+
+  const [sessionId, setSessionId] = useState(generateRandomSessionId(10));
+
   const [message, setMessage] = useState("");
   const messagesEndRef = useRef(null);
 
@@ -33,12 +40,12 @@ export const ChatBoxV2 = () => {
       setMessage("");
 
       try {
-        const response = await fetch("/api/chat-bedrock", {
+        const response = await fetch("/api/chat-rag", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ messages: [...messages, newMessage] }),
+          body: JSON.stringify({ messages: [...messages, newMessage] , sessionId: sessionId}),
         });
 
         if (!response.ok) {
@@ -94,7 +101,6 @@ export const ChatBoxV2 = () => {
   }, [messages]);
 
   return (
-    
       <Box
         sx={{
           width: { xs: "100%", sm: "80%", md: "60%", lg: "50%" },
@@ -186,6 +192,7 @@ export const ChatBoxV2 = () => {
           >
             Send
           </Button>
+          
         </Stack>
       </Box>
   );

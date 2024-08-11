@@ -75,36 +75,7 @@ export const ChatBox = () => {
     }, [messages]);
   
     return (
-      <Box
-        width="100vw"
-        height="100vh"
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-        sx={{
-          backgroundColor: '#E0F7FA', // Light blue background
-          padding: '2%',
-        }}
-      >
-            <Stack
-          direction="row"
-          spacing={2}
-          alignItems="center"
-          mb={3}
-        >
-          <MedicalIcon sx={{ fontSize: 40, color: '#FF4C4C' }} />
-          <Typography
-            variant="h4"
-            fontWeight="600"
-            sx={{
-              color: '#FF4C4C', // Bright red for headings
-              fontFamily: 'Arial, sans-serif', // Changed font for heading
-            }}
-          >
-            First Aid Chatbot
-          </Typography>
-        </Stack>
+           
         <Box
           sx={{
             width: { xs: '100%', sm: '80%', md: '60%', lg: '50%' },
@@ -193,6 +164,5 @@ export const ChatBox = () => {
             </Button>
           </Stack>
         </Box>
-      </Box>
     );
   }
